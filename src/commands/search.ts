@@ -15,10 +15,9 @@ export default class Search extends Command {
     const {args, flags} = this.parse(Search)
     const query = {key: process.env.MEETUP_API_KEY, text: args.text, zip: flags.zip}
 
-    axios.get('https://api.meetup.com/find/groups', {params: query}).then(response => {
-      for (let meetup of response.data) {
-        this.log(meetup.name)
-      }
-    })
+    const {data: meetups} = await axios.get('https://api.meetup.com/find/groups', {params: query})
+    for (let meetup of meetups) {
+      this.log(meetup.name)
+    }
   }
 }
