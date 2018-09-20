@@ -15,11 +15,11 @@ meetup.com cli
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g meetup
+$ npm install -g meetup-cli
 $ meetup COMMAND
 running command...
 $ meetup (-v|--version|version)
-meetup/0.0.0 darwin-x64 node-v10.9.0
+meetup-cli/0.0.0 darwin-x64 node-v10.9.0
 $ meetup --help [COMMAND]
 USAGE
   $ meetup COMMAND
@@ -28,29 +28,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`meetup hello [FILE]`](#meetup-hello-file)
 * [`meetup help [COMMAND]`](#meetup-help-command)
-* [`meetup search [FILE]`](#meetup-search-file)
-
-## `meetup hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ meetup hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ meetup hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/mwoods79/meetup/blob/v0.0.0/src/commands/hello.ts)_
+* [`meetup search TEXT`](#meetup-search-text)
+* [`meetup whoami`](#meetup-whoami)
 
 ## `meetup help [COMMAND]`
 
@@ -69,19 +49,29 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.2/src/commands/help.ts)_
 
-## `meetup search [FILE]`
+## `meetup search TEXT`
 
-describe the command here
+search meetup.com
 
 ```
 USAGE
-  $ meetup search [FILE]
+  $ meetup search TEXT
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help     show CLI help
+  -z, --zip=zip  zipcode to search in
 ```
 
-_See code: [src/commands/search.ts](https://github.com/mwoods79/meetup/blob/v0.0.0/src/commands/search.ts)_
+_See code: [src/commands/search.ts](https://github.com/mwoods79/meetup-cli/blob/v0.0.0/src/commands/search.ts)_
+
+## `meetup whoami`
+
+search meetup.com
+
+```
+USAGE
+  $ meetup whoami
+```
+
+_See code: [src/commands/whoami.ts](https://github.com/mwoods79/meetup-cli/blob/v0.0.0/src/commands/whoami.ts)_
 <!-- commandsstop -->
